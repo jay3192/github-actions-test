@@ -1,0 +1,131 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Margin */
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+.item-table {
+  width: auto;
+}
+.item-table tr {
+  border: none;
+}
+.item-table td {
+  padding: 0 5px 5px;
+}
+
+.recipe-table {
+  min-width: 20rem;
+  width: max-content;
+}
+#recipe-ingredients {
+  border: none;
+  padding-left: revert;
+  list-style: disclosure-closed;
+}
+#recipe-ingredients li {
+  border: none;
+  list-style: unset;
+}
+.recipe-btn {
+  text-transform: capitalize;
+}
+
+/* Small devices (landscape phones, 599px and up) */
+@media (max-width: 599px) {
+}
+
+/* Medium devices (tablets, 600px and up) */
+@media (min-width: 600px) {
+  .recipe-item:nth-child(3n + 1) {
+    clear: left;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    padding: 0 2rem;
+  }
+  .navbar .navbar-logo {
+    position: relative;
+    font-size: 1.8rem;
+  }
+  .navbar .navbar-link {
+    font-size: 1.2rem;
+  }
+
+  .recipe-item:nth-child(3n + 1) {
+    clear: none;
+  }
+  .recipe-item:nth-child(4n + 1) {
+    clear: left;
+  }
+}
