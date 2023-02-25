@@ -12,7 +12,7 @@ import NotFound from "./components/common/NotFound";
 
 const fetchUrl = process.env.REACT_APP_FETCH_URL || "http://localhost:3001";
 
-function App() {
+const App = () => {
   useEffect(() => {
     // Init Materialize JS
     M.AutoInit();
@@ -66,6 +66,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

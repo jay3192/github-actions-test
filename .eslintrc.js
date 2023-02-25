@@ -12,7 +12,7 @@ module.exports = {
   plugins: ["react"],
   rules: {
     quotes: ["error", "double", { avoidEscape: true }],
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "unix"],
     "comma-dangle": ["error", { functions: "never" }],
     "no-console": "off",
   },
