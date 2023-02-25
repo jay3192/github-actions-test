@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "materialize-css/dist/css/materialize.min.css";
+import M from "materialize-css/dist/js/materialize.min";
+import "./App.css";
+
 import NavBar from "./components/common/NavBar";
 import About from "./components/pages/About";
 import Home from "./components/pages/Home";
 import Recipe from "./components/recipe/Recipe";
 import NotFound from "./components/common/NotFound";
-
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css/dist/js/materialize.min.js";
-import "./App.css";
 
 const fetchUrl = process.env.REACT_APP_FETCH_URL || "http://localhost:3001";
 
@@ -23,17 +23,15 @@ function App() {
 
   const getRecipes = async (text) => {
     try {
-      const res = await fetch(fetchUrl + `/recipies?q=${text}`);
+      const res = await fetch(`${fetchUrl}/recipies?q=${text}`);
 
       const data = await res.json();
 
-      if (data.hasOwnProperty("count") && data.hasOwnProperty("hits")) {
+      if (Object.hasOwn(data, "count") && Object.hasOwn(data, "hits")) {
         setRecipes(data);
         console.log(data);
-      } else {
-        if (data.hasOwnProperty("error")) {
-          throw new Error(data.error);
-        }
+      } else if (Object.hasOwn(data, "error")) {
+        throw new Error(data.error);
       }
     } catch (err) {
       console.log(err);
