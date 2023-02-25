@@ -1,6 +1,6 @@
-import React, { Fragment, useState } from "react";
-import RecipeList from "../recipe/RecipeList";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import RecipeList from "../recipe/RecipeList";
 
 const Home = ({ getRecipes, recipes, getCurrent }) => {
   const [text, setText] = useState("");
@@ -12,7 +12,7 @@ const Home = ({ getRecipes, recipes, getCurrent }) => {
   };
 
   return (
-    <Fragment>
+    <>
       <section>
         <h3>Search for Recipes</h3>
         <form className="search-form" onSubmit={submitHandler}>
@@ -32,7 +32,7 @@ const Home = ({ getRecipes, recipes, getCurrent }) => {
         </blockquote>
       </section>
       <RecipeList recipes={recipes} getCurrent={getCurrent} />
-    </Fragment>
+    </>
   );
 };
 

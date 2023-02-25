@@ -10,7 +10,13 @@ const RecipeItem = ({ recipe: { recipe }, getCurrent }) => {
   return (
     <li className="col s12 m4 l3 recipe-item">
       <Link to={`/recipe/${recipe.label.replaceAll(" ", "-").toLowerCase()}`}>
-        <div className="card" onClick={clickHandler}>
+        <div
+          className="card"
+          role="link"
+          tabIndex={-1}
+          onClick={clickHandler}
+          onKeyUp={clickHandler}
+        >
           <div className="card-image">
             <img
               src={recipe.image}
