@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -22,7 +22,7 @@ const Recipe = ({ current }) => {
           </div>
         )}
         {!empty && (
-          <Fragment>
+          <>
             <div className="col s12">
               <h3>{current.label}</h3>
             </div>
@@ -95,7 +95,7 @@ const Recipe = ({ current }) => {
                 </tbody>
               </table>
             </div>
-          </Fragment>
+          </>
         )}
       </div>
       {!empty && (
@@ -105,7 +105,10 @@ const Recipe = ({ current }) => {
             <ul className="collection" id="recipe-ingredients">
               {current.ingredientLines.length !== 0 &&
                 current.ingredientLines.map((item, index) => (
-                  <li key={index} className="collection-item">
+                  <li
+                    key={Math.ceil(Math.random * 10 + index)}
+                    className="collection-item"
+                  >
                     {item}
                   </li>
                 ))}

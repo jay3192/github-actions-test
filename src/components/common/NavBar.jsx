@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import M from "materialize-css/dist/js/materialize.min.js";
+import M from "materialize-css/dist/js/materialize.min";
 
 const NavBar = () => {
   useEffect(() => {
-    //activate mobile sidenav
-    window.addEventListener("load", function () {
+    // activate mobile sidenav
+    window.addEventListener("load", () => {
       const elem = document.querySelector(".sidenav");
       const instance = M.Sidenav.init(elem);
 
-      //close sidenav on link click
+      // close sidenav on link click
       elem.querySelectorAll("a").forEach((item) => {
         item.addEventListener("click", () => {
           instance.close();
