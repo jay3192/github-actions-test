@@ -38,3 +38,14 @@ jobs:
       - run: npm ci
       - run: npm run build
       
+  deployment:
+    name: Deploy Dev
+    needs: [build]
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    environment: github-pages
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Deploy to github pages
+        run: echo I am deploying!
