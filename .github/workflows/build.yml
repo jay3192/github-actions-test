@@ -47,5 +47,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Deploy to github pages
-        run: echo I am deploying!
+      - name: Upload GitHub Pages artifact        
+        uses: actions/upload-pages-artifact@v1.0.7
+        with:
+          # Artifact name
+          name: build
+          # Path of the directory containing the static assets.
+          path: _site/
+          # Duration after which artifact will expire in days.
+          # retention-days: # optional, default is 1
