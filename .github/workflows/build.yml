@@ -44,4 +44,4 @@ jobs:
           # Artifact name
           name: build
           # Path of the directory containing the static assets.
-          path: build/
+          path: build
