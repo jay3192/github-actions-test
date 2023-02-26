@@ -53,6 +53,6 @@ jobs:
           # Artifact name
           name: build
           # Path of the directory containing the static assets.
-          path: _site/
+          path: build/
           # Duration after which artifact will expire in days.
           # retention-days: # optional, default is 1
