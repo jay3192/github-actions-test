@@ -9,7 +9,11 @@ const RecipeItem = ({ recipe: { recipe }, getCurrent }) => {
 
   return (
     <li className="col s12 m4 l3 recipe-item">
-      <Link to={`/recipe/${recipe.label.replaceAll(" ", "-").toLowerCase()}`}>
+      <Link
+        to={`/github-actions-test/recipe/${recipe.label
+          .replaceAll(" ", "-")
+          .toLowerCase()}`}
+      >
         <div
           className="card"
           role="link"

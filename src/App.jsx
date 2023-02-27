@@ -49,7 +49,7 @@ const App = () => {
         <div className="container">
           <Routes>
             <Route
-              path="/"
+              path="/github-actions-test/"
               element={
                 <Home
                   recipes={recipes}
@@ -58,8 +58,11 @@ const App = () => {
                 />
               }
             />
-            <Route path="recipe/:name" element={<Recipe current={current} />} />
-            <Route path="about" element={<About />} />
+            <Route
+              path="github-actions-test/recipe/:name"
+              element={<Recipe current={current} />}
+            />
+            <Route path="github-actions-test/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

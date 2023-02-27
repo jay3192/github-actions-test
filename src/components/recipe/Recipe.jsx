@@ -9,7 +9,7 @@ const Recipe = ({ current }) => {
     <section>
       <div className="row">
         <div className="col s12 my-2">
-          <Link to="/" className="btn blue-grey darken-2">
+          <Link to="/github-actions-test/" className="btn blue-grey darken-2">
             Back to Home
           </Link>
         </div>

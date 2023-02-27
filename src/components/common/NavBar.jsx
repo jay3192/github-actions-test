@@ -23,7 +23,7 @@ const NavBar = () => {
     <header>
       <nav className="navbar">
         <div className="nav-wrapper">
-          <Link to="/" className="brand-logo navbar-logo">
+          <Link to="/github-actions-test/" className="brand-logo navbar-logo">
             Recipe Search
           </Link>
           <a href="#!" data-target="mobile-demo" className="sidenav-trigger">
@@ -31,12 +31,12 @@ const NavBar = () => {
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
-              <Link to="/" className="navbar-link">
+              <Link to="/github-actions-test/" className="navbar-link">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="navbar-link">
+              <Link to="/github-actions-test/about" className="navbar-link">
                 About
               </Link>
             </li>
@@ -46,10 +46,10 @@ const NavBar = () => {
 
       <ul className="sidenav" id="mobile-demo">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/github-actions-test/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/github-actions-test/about">About</Link>
         </li>
       </ul>
     </header>
